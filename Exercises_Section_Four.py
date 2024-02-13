@@ -382,8 +382,6 @@ print(f"The price with {discount_rate:.2f} % of "
 
 print(25*'-')
 
-"""
-
 print("Exercise 38: ")
 text_input_1 = "Enter an amount for the employee's salary: "
 salary = float(input(text_input_1))
@@ -394,5 +392,46 @@ percentage_increase = float(input(text_input_2))
 new_salary = (1 + percentage_increase/100)*salary
 
 print(f"The new salary is: 'R$ {new_salary:.2f}'.")
+
+print(25*'-')
+
+print("Exercise 39: ")
+text_input = "Enter the value of the prize to be shared: R$ "
+total_prize = float(input(text_input))
+
+first_prize = total_prize*0.46
+second_prize = total_prize*0.32
+third_prize = total_prize*0.22
+
+print(f"The first winner received: R$ {first_prize:.2f}.")
+print(f"The second winner received: R$ {second_prize:.2f}.")
+print(f"The third winner received: R$ {third_prize:.2f}.")
+
+print(25*'-')
+
+print("Exercise 40: ")
+text_input = "Enter the number of days worked for the plumber: "
+
+number_of_days_worked = int(input(text_input))
+salary_plumber = (1 - 0.08)*(number_of_days_worked*30.00)
+
+print(f"The salary of the plumber is: "
+	  f"R$ {salary_plumber:.2f}.")
+print(25*'-')
+
+
+"""
+
+print("Exercise 41: ")
+text_input_1 = "Enter the hourly rate: R$ "
+text_input_2 = "Enter the number of hours worked: "
+
+hourly_rate = float(input(text_input_1))
+hours_worked = float(input(text_input_2))
+additional = 0.10 # Adicional de 10%
+
+salary = (1 + additional)*hourly_rate*hours_worked
+
+print(f"The salary of employee is: R$ {salary:.2f}.")
 
 print(25*'-')
