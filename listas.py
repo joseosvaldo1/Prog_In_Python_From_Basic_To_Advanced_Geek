@@ -5,6 +5,9 @@
 em outras linguagens) com a diferença de serem DINÂMICOS e
 também podermos colocar QUALQUER tipo de dados.
 
+- Listas são objetos mutáveis em Python, ou seja, elas
+podem sofrer mudanças constnates.
+
 - Observações:
 1) Dinâmicos: As listas em Python não possuem tamanho fixo,
 ou seja, podemos criar a lista e ir simplesmente adicionando
@@ -13,7 +16,7 @@ os elementos.
 dados fixos, ou seja, podemos colocar qualquer tipo de
 dado.
 
-- As listas em Python são representadas por colchetes.
+- As listas em Python são representadas por colchetes - [].
 - Podemos facilmente checar se um determinado valor
 está contido em uma determinada lista.
 
