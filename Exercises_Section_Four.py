@@ -419,9 +419,6 @@ print(f"The salary of the plumber is: "
 	  f"R$ {salary_plumber:.2f}.")
 print(25*'-')
 
-
-"""
-
 print("Exercise 41: ")
 text_input_1 = "Enter the hourly rate: R$ "
 text_input_2 = "Enter the number of hours worked: "
@@ -433,5 +430,124 @@ additional = 0.10 # Adicional de 10%
 salary = (1 + additional)*hourly_rate*hours_worked
 
 print(f"The salary of employee is: R$ {salary:.2f}.")
+
+print(25*'-')
+
+print("Exercise 42: ")
+
+# Solicita ao usuário que insira o salário-base
+# do funcionário:
+base_salary = float(input("Enter the employee's "
+						  "base salary: "))
+
+# Solicita ao usuário que insira o valor adicional
+# (gratificação):
+additional = float(input("Enter the additional "
+						 "amount on top of the "
+						 "base salary (in decimal "
+						 "form, e.g., 0.05 for 5%): "))
+
+# Solicita ao usuário que insira a taxa de imposto
+# de renda:
+tax_rate = float(input("Enter the income tax rate "
+					   "that will be levied on the "
+					   "base salary (in decimal form, "
+					   "e.g., 0.07 for 7%): "))
+
+# Calcula o salário a receber com base nos
+# nos dados de entrada fornecidos:
+salary_to_be_received = (1 + additional - tax_rate) * base_salary
+
+# Imprime o resultado
+print(f"The salary to be received will be: R$ "
+	  f"{salary_to_be_received:.2f}")
+
+
+print(25*'-')
+
+print("Exercise 42: ")
+
+input_text_1 = " Enter the total value of the customer's purchases: R$ "
+total_value_purchase = float(input(input_text_1))
+
+total_payable_discount = (0.90)*total_value_purchase
+installment_amount = total_value_purchase / 3.0
+seller_commission_amount_3 = 0.05*total_payable_discount
+seller_commission_amount_4 = 0.05*total_value_purchase
+
+print(15*'-')
+
+print("Options:")
+print("Enter '1' for: 'Total payable with ten percent discount'")
+print(f"Enter '2' for: 'Value of each installment, in 3 "
+	  f"interest-free installments")
+print(f"Enter '3' for: 'The seller's commission, if the sale "
+	  f"is cash - 5% of the discounted value")
+print(f"Enter '4' for: 'the seller's commission, if the sale "
+	  f"is made - in installments - 5% of the total value")
+print(f"Enter '5' do exit:")
+
+print(15*'-')
+
+input_text_2 = "Enter the option: "
+option = int(input(input_text_2))
+
+while option != 5:
+
+	if option == 1:
+
+		print(15*'-')
+		print(f"The total payable with ten percent "
+			  f"of discount is: R$ {total_payable_discount:.2f}.")
+		print(15 * '-')
+		print(" ")
+
+	elif option == 2:
+
+		print(15*'-')
+		print(f"The installment value is: "
+			  f"R$ {installment_amount:.2f}. ")
+		print(15 * '-')
+		print(" ")
+
+	elif option == 3:
+
+		print(15*'-')
+		print(f"The seller's commission, if the sale is cash - " +
+			  f"5% of the discounted value: R${seller_commission_amount_3:.2f}")
+		print(15 * '-')
+		print(" ")
+
+	elif option == 4:
+
+		print(15*'-')
+		print(f"The seller's commission, if the sale is made in installments - " +
+			  f"5% of the total value: R$ {seller_commission_amount_4:.2f}.")
+		print(15 * '-')
+		print(" ")
+
+	else:
+
+		print(15*'-')
+		print("Invalid option. Enter a valid option (from 1 to 5) please!")
+		print(15 * '-')
+		print(" ")
+
+	input_text_2 = "Enter the option: "
+	option = int(input(input_text_2))
+
+
+print(25*'-')
+
+"""
+
+print("Exercise 43: ")
+
+# Receba a altura do degrau de uma escada e a altura que o
+# usuário deseja alcançar subindo a escada. Calcule e mostre
+# quantos degraus o usuário deverá subir para atingir seu
+# objetivo.
+
+
 
 print(25*'-')
