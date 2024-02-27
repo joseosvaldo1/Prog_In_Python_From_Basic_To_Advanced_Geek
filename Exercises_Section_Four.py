@@ -465,7 +465,7 @@ print(f"The salary to be received will be: R$ "
 
 print(25*'-')
 
-print("Exercise 42: ")
+print("Exercise 43: ")
 
 input_text_1 = " Enter the total value of the customer's purchases: R$ "
 total_value_purchase = float(input(input_text_1))
@@ -539,15 +539,210 @@ while option != 5:
 
 print(25*'-')
 
-"""
-
-print("Exercise 43: ")
+print("Exercise 44: ")
 
 # Receba a altura do degrau de uma escada e a altura que o
 # usuário deseja alcançar subindo a escada. Calcule e mostre
 # quantos degraus o usuário deverá subir para atingir seu
 # objetivo.
 
+input_text_1 = "Enter the height of the step in centimeters: "
+input_text_2 = "Enter the desired height to reach in centimeters: "
 
+step_height = float(input(input_text_1))
+desired_height = float(input(input_text_2))
+
+step_quantity = int(desired_height / step_height)
+
+print(f"The quantity of steps is: {step_quantity} steps")
+
+print(25*'-')
+
+print("Exercise 45: ")
+
+# Faça um programa para converter uma letra maiúscula em letra
+# minúscula. Use a tabela ASCII para resolver o problema.
+
+# Get an uppercase letter from the user
+uppercase_letter = input("Enter an uppercase letter: ")
+
+# Convert the uppercase letter to lowercase using ASCII table:
+ascii_value_uppercase = ord(uppercase_letter)
+ascii_value_lowercase = ascii_value_uppercase + 32
+
+# The difference between uppercase and lowercase is 32 in the ASCII table
+lowercase_letter = chr(ascii_value_lowercase)
+
+# Display the result:
+print(f"The corresponding lowercase letter is: {lowercase_letter}")
+
+print(25*'-')
+
+print("Exercise 46: ")
+# Faça um programa que leia um número inteiro positivo de três dígitos
+# (de 100 a 999). Gere outro número formado pelos dígitos invertidos do
+# número lido. Exemplo:
+#			Número Lido:   123
+#			Número Gerado: 321
+
+input_text = "Enter a number between 100 and 999: "
+read_number = input(input_text)
+
+generated_number_array = list(read_number)
+generated_number = ''.join(generated_number_array[::-1])
+
+print(f"The generated number is: {generated_number}")
+
+print(25*'-')
+
+print("Exercise 47: ")
+# Leia um número inteiro de 4 dígitos (de 1000 a 9999) e
+# imprima 1 dígito por linha.
+
+input_text = "Enter an integer from 1000 to 9999: "
+
+read_number = input(input_text)
+
+# Convertendo em uma lista:
+read_number_list = list(read_number)
+
+for digit in read_number_list:
+	print(digit)
+
+
+print(25*'-')
+
+print("Exercise 48: ")
+# Leia um valor inteiro em segundos, e
+# imprima-o em horas, minutos e segundos.
+
+input_text = "Enter a time interval in seconds: "
+
+time_in_seconds = int(input(input_text))
+
+hours = int(time_in_seconds / 3600)
+minutes = int((time_in_seconds % 3600) / 60)
+seconds = int(time_in_seconds % 60)
+
+print(f"{hours} h: {minutes} min: {seconds} s")
+
+print(25*'-')
+
+print("Exercise 49: ")
+
+# Faça um programa para leia o horário (hora, minuto e segundo) de
+# início e a duração, em segundos, de uma experiência biológica. O
+# programa deve resultar com o novo horário (hora, minuto e segundo)
+# do termino da mesma.
+
+
+# Function to calculate the new time based on the start time
+# and duration in seconds:
+def calculate_end_time(start_hour, start_minute, start_second, duration_seconds):
+    # Converting everything to seconds:
+    total_seconds_start = start_hour * 3600 + start_minute * 60 + start_second
+    total_seconds_end = total_seconds_start + duration_seconds
+
+    # Calculating hours, minutes, and seconds for the new time:
+    new_hour = total_seconds_end // 3600
+    new_minute = (total_seconds_end % 3600) // 60
+    new_second = total_seconds_end % 60
+
+    return new_hour, new_minute, new_second
+
+# Getting user input:
+start_hour = int(input("Enter the start hour: "))
+start_minute = int(input("Enter the start minute: "))
+start_second = int(input("Enter the start second: "))
+duration_seconds = int(input("Enter the duration in seconds: "))
+
+# Calculating the new time:
+new_hour, new_minute, new_second = calculate_end_time(start_hour, start_minute, start_second, duration_seconds)
+
+# Displaying the result:
+print(f"The new end time is: {new_hour} hours, {new_minute} minutes, and {new_second} seconds.")
+
+print(25*'-')
+
+print("Exercise 50: ")
+
+# Implemente um programa que calcule o ano de nascimento de uma pessoa
+# a partir de sua idade e do ano atual.
+
+age = int(input("Enter your age: "))
+current_year = int(input("Enter the current year: "))
+
+year_birthday = current_year - age
+
+print(f"The year of your birth is: '{year_birthday}'.")
+
+
+print(25*'-')
+
+print("Exercise 50: ")
+
+# Escreva um programa que leia as coordenadas x e y de pontos no R² e
+# calcule sua distância da origem (0 0).
+
+x = float(input("Enter the value for coordinate 'x': "))
+y = float(input("Enter the value for coordinate 'y': "))
+
+distance_until_origin = (x**2 + y**2)**(0.5)
+
+print(f"The distance the given point until "
+      f"origin is: '{distance_until_origin}.'")
+
+print(f"The year of your birth is: '{distance_until_origin:.1f}'.")
+
+
+print(25*'-')
+
+print("Exercise 51: ")
+
+# Três amigos jogaram na loteria. Caso eles ganhem, o prêmio deve ser
+# repartido proporcionalmente ao valor que cada um deu para a realização
+# da . Faça um programa que lera quanto cada apostador investiu,
+# o valor do prêmio, e imprima quanto cada um ganharia do premio com
+# base no valor investido.
+
+value_bet1 = float(input("Amount bet by the first friend: R$ "))
+value_bet2 = float(input("Amount bet by the second friend: R$ "))
+value_bet3 = float(input("Amount bet by the third friend: R$ "))
+
+value_prize = float(input("Enter the value for the prize: R$ "))
+
+constant = (value_bet1 + value_bet2 + value_bet3) / value_prize
+
+share_value1 = constant * value_bet1 * value_prize
+share_value2 = constant * value_bet2 * value_prize
+share_value3 = constant * value_bet3 * value_prize
+
+print(f"The share of the first friend is: R$ {share_value1:.2f}")
+print(f"The share of the second friend is: R$ {share_value2:.2f}")
+print(f"The share of the third friend is: R$ {share_value3:.2f}")
+
+
+print(25*'-')
+
+"""
+
+print("Exercise 52: ")
+
+# Faça um programa para ler as dimensões de um terreno (comprimento
+# 'c' e largura 'l'), bem como o preço do metro de tela 'p'. Imprima
+# o custo para cercar este mesmo terreno com tela.
+
+
+land_length = float(input("Enter a value for the length of land: "))
+land_width = float(input("Enter a value for the width of land: "))
+price_fence = float(input("Enter the price of the meter of fence: R$ "))
+
+# Determining the the perimeter of the land:
+perimeter = 2.0*(land_width+land_length)
+
+total_price_fence = perimeter*price_fence
+
+print(f"The total price to fence the land will be: "
+	  f"R$ {total_price_fence: .2f}.")
 
 print(25*'-')

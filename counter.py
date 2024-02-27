@@ -1,6 +1,8 @@
 """
 # Módulo Collections - Counter:
 
+link: https://docs.python.org/3/library/collections.html#collections.Counter
+
 - Collections => High-Performance Container Datetypes
 - O módulo collections em Python fornece alternativas
 especializadas e eficientes para os tipos de contêineres

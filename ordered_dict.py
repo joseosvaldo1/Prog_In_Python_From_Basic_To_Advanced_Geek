@@ -1,6 +1,8 @@
 """
 # Módulo Collections - Ordered Dicit:
 
+link: https://docs.python.org/3/library/collections.html#collections.OrderedDict
+
 - Em Python, um OrderedDict é um tipo de estrutura de dados que é
 semelhante a um dicionário padrão (dict), mas com a distinção
 importante de que mantém a ordem de inserção dos elementos.

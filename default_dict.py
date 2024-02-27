@@ -1,6 +1,8 @@
 """
 # Módulo Collections - Default Dict:
 
+link: https://docs.python.org/3/library/collections.html#collections.defaultdict
+
 # Recapitulando Dicionários:
 
 dict_1 = {'course': 'Programação em Python: Essencial'}
