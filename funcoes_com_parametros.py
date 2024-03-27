@@ -101,9 +101,9 @@ print(15*'-')
 # Caso utilizemos nomes dos parâmetros como argumentos para informá-los,
 # podemos utilizar qualquer ordem.
 
-print(nome_colpeto(nome="Angelina", sobrenome="Jolie"))
+print(nome_completo(nome="Angelina", sobrenome="Jolie"))
 print(15*'-')
-print(nome_colpeto(nome=nome_1, sobrenome=sobrenome_1))
+print(nome_completo(nome=nome_1, sobrenome=sobrenome_1))
 print(15*'-')
 print(nome_colpeto(sobrenome="Marques", nome="Marcia"))
 print(15*'-')
