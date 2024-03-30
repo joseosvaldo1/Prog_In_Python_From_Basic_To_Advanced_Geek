@@ -4,9 +4,6 @@
 - Nós podemos adicionar estruturas condicionais lógicas as
 nossas List Comprehension.
 
-
-
-
 """
 
 # Exemplos:
