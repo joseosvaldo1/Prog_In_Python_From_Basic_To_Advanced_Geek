@@ -122,11 +122,13 @@ def soma_impares(numeros):
 	return total
 
 
-list_1 = [1, 2, 3, 4, 5, 6, 7]
+if __name__ == '__main__':
+	list_1 = [1, 2, 3, 4, 5, 6, 7]
 
-print(f"soma_impares(list_1) = {soma_impares(list_1)}")
-print(15*'-')
+	print(f"soma_impares(list_1) = {soma_impares(list_1)}")
+	print(15*'-')
 
-tuple_1 = tuple(list_1)
+	tuple_1 = tuple(list_1)
 
-print(f"soma_impares(tuple_1) = {soma_impares(tuple_1)}")
+	print(f"soma_impares(tuple_1) = {soma_impares(tuple_1)}")
+
