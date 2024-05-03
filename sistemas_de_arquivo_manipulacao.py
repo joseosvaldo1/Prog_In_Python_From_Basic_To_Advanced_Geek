@@ -251,14 +251,23 @@ file.seek(0)
 print(f"file.read() = {file.read()}")
 file.close()
 
+# Documentação do módulo 'os':
+# https://docs.python.org/3/library/os.html
+
 """
 
 import os
 import tempfile
 
 
+# Criando arquivos temporários de outra forma:
 
-
+file = tempfile.NamedTemporaryFile()
+file.write(b"Geek University.\n")
+print(f"file.name = {file.name}")
+print(f"file.read() = {file.read()}")
+input("Type enter do finish!")
+file.close()
 
 
 
