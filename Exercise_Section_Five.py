@@ -621,8 +621,7 @@ while chosen_number.lower() != 'q':
 
 print(25*'-')
 
-
-"""
+# ----------------------------------------------------------------
 
 
 print("Exercício - 20: ")
@@ -639,6 +638,139 @@ print("Exercício - 20: ")
 # diferentes.
 
 
+def check_triangle(a, b, c):
+    try:
+        if not all(isinstance(measure, (int, float)) for measure in [a, b, c]):
+            raise TypeError("Invalid type for triangle measure(s).")
+        if any(measure <= 0 for measure in [a, b, c]):
+            raise ValueError("Triangle measurements must be positive real numbers.")
+        if a + b > c and a + c > b and b + c > a:
+            return True
+        else:
+            return False
+    except Exception as err:
+        print(f"An error occurred in check_triangle: {err}")
+
+
+def check_type_triangle(a, b, c):
+    try:
+        if not check_triangle(a, b, c):
+            return "It isn´t a triangle."
+        elif a == b == c:
+            return "It is an equilateral triangle."
+        elif a == b or b == c or c == a:
+            return "It is an isosceles triangle."
+        else:
+            return "It is a scalene triangle."
+    except Exception as err:
+        print(f"An error occurred in check_type_triangle: {err}")
+
+
+try:
+    a = float(input("Enter a value for 'a': "))
+    b = float(input("Enter a value for 'b': "))
+    c = float(input("Enter a value for 'c': "))
+
+    print(15*'-')
+
+    print(f"The type of triangle is: {check_type_triangle(a, b, c)}")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
 print(25*'-')
+
+# ---------------------------------------------------------
+
+print("Exercício - 21: ")
+
+# 21. Escreva o menu de opções abaixo. Leia a opção do usuário e
+# execute a operação escolhida. Escreva uma mensagem de erro se
+# a opção for inválida:
+# Escolha a opção
+# 1 - Soma de 2 números
+# 2 - Diferença entre 2 números (maior pelo menor)
+# 3 - Produto entre 2 números
+# 4 - Divisão entre 2 números (o denominador não pode ser zero)
+# Opção:
+
+print("Choose the option:")
+print("1. Add two numbers;")
+print("2. Subtract two numbers (larger to smaller);")
+print("3. Multiply two numbers;")
+print("4. Divide (the denominator cannot be zero).")
+print("Option: ")
+
+option = int(input("Choose the option: "))
+number_1 = float(input("Enter the first number: "))
+number_2 = float(input("Enter the second number: "))
+print(15*'-')
+while option not in [1, 2, 3, 4]:
+	print("Invalid option. Please try again.")
+	option = int(input("Choose the option:"))
+
+if option == 1:
+	result_1 = number_1 + number_2
+	print(f"The sum of {number_1} and {number_2} is: "
+		  f"'{result_1}'")
+elif option == 2:
+	result_2 = number_1 - number_2
+	print(f"The difference of {number_1} and {number_2} "
+		  f"is: '{result_2}'")
+elif option == 3:
+	result_3 = number_1 * number_2
+	print(f"The product of {number_1} and {number_2} is "
+		  f"'{result_3}'")
+elif option == 4:
+	result_4 = number_1 / number_2
+	print(f"The quotient of {number_1} and {number_2} is "
+		  f"'{result_4}'")
+
+
+print(25*'-')
+
+# ---------------------------------------------------------
+
+"""
+
+
+print("Exercício - 22: ")
+
+# 22. Leia a idade e o tempo de serviço de um trabalhador e
+# escreva se ele pode ou não se aposentar. As condições para
+# aposentadoria são
+# * Ter pelo menos 65 anos,
+# * Ou ter trabalhado pelo menos 30 anos,
+# * Ou ter, pelo menos, 60 anos e trabalhado pelo menos 25 anos
+
+
+def check_retirement_status (age, service_time):
+	try:
+		if not all (isinstance(condition, int) for condition in
+					[age, service_time]):
+			raise TypeError ("Invalid type for some condition.")
+		if any(condition < 0 for condition in [age, service_time]):
+			raise ValueError ("Invalid value for some condition.")
+		if (age >= 65 or
+			service_time >= 30 or
+			(age >= 80 and service_time >= 25)):
+			return "The worker can retire."
+		else:
+			return "The worker can not retire."
+	except Exception as err_1:
+		print(f"An error occurred: {err_1}")
+
+
+try:
+	age = int(input("Enter a value for the worker's age: "))
+	service_time = int(input("Enter a value for the "
+							 "worker's service time: "))
+	print(check_retirement_status(age, service_time))
+except Exception as err_2:
+	print(f"An error occurred: {err_2}")
+
+
+
+print(25*'-')
+
+
 
