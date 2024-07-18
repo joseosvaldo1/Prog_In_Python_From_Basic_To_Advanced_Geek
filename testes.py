@@ -1,6 +1,6 @@
 import unittest
 
-from atividades import eat, sleep
+from atividades import eat, sleep, its_funny
 
 
 class AtividadesTestes(unittest.TestCase):
@@ -31,6 +31,22 @@ class AtividadesTestes(unittest.TestCase):
 			sleep(10),
 			"Putz! I slept a lot. I'm late for work."
 		)
+
+	def test_its_funny(self):
+
+		self.assertEqual(
+			its_funny('Sergio Malandro'), False
+		)
+		self.assertFalse(
+			its_funny('Sergio Malandro')
+		)
+
+		self.assertTrue(
+			its_funny('Jim Carrey'),
+			"Jim Carrie should be funny!"
+
+		)
+
 
 
 if __name__ == '__main__':

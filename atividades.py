@@ -13,3 +13,11 @@ def sleep(number_of_hours):
 	else:
 		return (f"I'm still tired after sleeping "
 		        f"for {number_of_hours} hours. :(")
+
+
+def its_funny(person):
+	comedians = ['Jim Carrey', 'Bozo']
+	if person in comedians:
+		return True
+
+	return False
