@@ -126,3 +126,45 @@ print(30*'-')
 
 print(header(text='Geek University', alignment=True))
 
+print(30*'-')
+
+print(header(text = '4', alignment = True))
+
+
+# Observações:
+
+# Forma correta do uso do annotation em type hiting:
+# Para parâmetros:
+# nome_do_parâmetro: tipo_do_dado_do_parametro  OU
+# nome_do_parâmetro: tipo_do_dado_do_parametro = valor_inicial_do_parametro
+
+# text: str  => Forma correta
+# alignment: bool = True  => Forma correta
+
+
+# Para o retorno de funções:
+
+#def name_da_funcao(parâmetros) -> tipo_de_dado_do_retorno_da_funcao:
+
+# def header(text: str, alignment: bool = True) -> str:
+
+
+# Forma incorretas do uso de annotatios em type hiting:
+
+# Para os parâmetros:
+
+# text:str   => Forma incorreta
+# text : str => Forma incorreta
+
+# alignment:bool = True  => Forma incorreta
+# alignment:bool= True  => Forma incorreta
+# alignment:bool =True  => Forma incorreta
+# alignment:bool=True  => Forma incorreta
+# alignment : bool= True  => Forma incorreta
+
+# Para os retornos de função:
+
+# def header(text: str, alignment: bool = True)->str:  => Forma incorreta
+# def header(text: str, alignment: bool = True)-> str: => Forma incorreta
+# def header(text: str, alignment: bool = True) ->str: => Forma incorreta
+
